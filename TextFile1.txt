@@ -1,0 +1,52 @@
+Exceptions**********************************************************************************
+
+- Exceptions are tested by the system operation itself. 
+- Exceptions are events that, if they occur, prevent the operation from succeeding.
+- Exceptions in command contracts and exceptions in query contracts may have distinct purposes. 
+In command contracts, exceptions are used when arguments or existing information
+do not satisfy a given business rule (for example, trying to register a customer that is already
+registered).
+However, in query contracts, exceptions have a different meaning. As a query does not change
+information, there is no invalid argument that could possibly prevent a well-defined query from
+being performed. If a user queries a system about a customer that does not exist, the query is not
+prevented from being performed: it would answer that there is no customer for the query; this is
+the right answer, not an exception. Exceptions in queries would be used only if by any chance the
+team decides that for a given condition the query must not be performed. Usually, those conditions
+are related to security issues, or other technological concerns such as multi-window interface, concurrency, 
+communication, etc. As these issues are usually not addressed by functional modeling,
+exceptions in queries contracts are not frequent
+
+
+cart:=createCart()   is not the intention of the user !!!!
+
+Exceptions**********************************************************************************
+
+
+
+
+Prec****************************************************************************************
+Two families of preconditions may be identified: 
+- Parameter guarantee  ==> 
+-----------for each group of invalid values for a system operation parameter, a precondition or exception must be defined.
+-----------
+• "semantic preconditions (example : requires that the database is consulted: for example, 
+verifying if there is a book with a given ISBN.)" 
+VS 
+• "syntactic verifications" (example : may be done by mechanisms other than preconditions)
+
+
+- Complementary constraint ==>
+-----------consists of assuring that certain constraints stronger than those of the conceptual model are 
+obtained while a given command is performed.
+
+• A specific statement about an instance or about a set of instances.
+• An existential statement about a set of instances.
+• A universal statement about a set of instances
+
+
+
+Examples: 
+- when performing a given command that role is filled (1) or not (0)
+- the cart has at least one item
+
+Prec****************************************************************************************

@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{80907200-C9EE-45DB-BED1-0EA96F7213E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3653FD99-86A7-448C-B22E-2D43DF8CF450}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessUseCases(SubDomains)", "BusinessUseCases(SubDomains)", "{4D3EFA05-8DF8-4A01-94E5-2A2D11CB70AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Babysit", "Babysit", "{C99BCD65-99A3-4211-9C05-8A105FD6A837}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Manage_Meals", "Manage_Meals", "{745ABE6F-EDA6-4E89-A661-31A9F1FD82BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Control_Babysitters_attendance", "Control_Babysitters_attendance", "{F49C82B1-1DC5-4F6A-A4C3-CB64E49D18CF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "babies.ApplicationLayer", "babies.ApplicationLayer\babies.ApplicationLayer.csproj", "{5F35B901-9F71-4AF7-8E13-F283078FF618}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "babies.DomainLayer", "babies.DomainLayer\babies.DomainLayer.csproj", "{28A50B01-B3AE-406F-AE47-23C351CDDB48}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "My Notes", "My Notes", "{09D3DAB0-E6AE-4878-ABC3-D2C08EC76696}"
+	ProjectSection(SolutionItems) = preProject
+		TextFile1.txt = TextFile1.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F35B901-9F71-4AF7-8E13-F283078FF618}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F35B901-9F71-4AF7-8E13-F283078FF618}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F35B901-9F71-4AF7-8E13-F283078FF618}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F35B901-9F71-4AF7-8E13-F283078FF618}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28A50B01-B3AE-406F-AE47-23C351CDDB48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28A50B01-B3AE-406F-AE47-23C351CDDB48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28A50B01-B3AE-406F-AE47-23C351CDDB48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28A50B01-B3AE-406F-AE47-23C351CDDB48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4D3EFA05-8DF8-4A01-94E5-2A2D11CB70AA} = {80907200-C9EE-45DB-BED1-0EA96F7213E3}
+		{C99BCD65-99A3-4211-9C05-8A105FD6A837} = {4D3EFA05-8DF8-4A01-94E5-2A2D11CB70AA}
+		{745ABE6F-EDA6-4E89-A661-31A9F1FD82BA} = {4D3EFA05-8DF8-4A01-94E5-2A2D11CB70AA}
+		{F49C82B1-1DC5-4F6A-A4C3-CB64E49D18CF} = {4D3EFA05-8DF8-4A01-94E5-2A2D11CB70AA}
+		{5F35B901-9F71-4AF7-8E13-F283078FF618} = {C99BCD65-99A3-4211-9C05-8A105FD6A837}
+		{28A50B01-B3AE-406F-AE47-23C351CDDB48} = {C99BCD65-99A3-4211-9C05-8A105FD6A837}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CCFEBB5B-324A-46FC-B435-E56E2847CA8B}
+	EndGlobalSection
+EndGlobal
