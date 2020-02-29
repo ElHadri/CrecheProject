@@ -15,8 +15,10 @@ namespace babies.ApplicationLayer.Application_services
         public static bool isBabyIdExists(BabyId aBabyId)
         {
             //...
+            return true;
         }
 
+        //****************************************************************************************************
         // pre: 
         // nbOfRegisteredBabies >= 0  [Complementary constraint] and
         // mistress[aMistressNickName] -> notEmpty() and
@@ -46,14 +48,21 @@ namespace babies.ApplicationLayer.Application_services
             //...
         }
 
-        // Prec: --none
-        // Rslt: Baby  ||  nothing ( if "the baby not found" )
-        // Warn: if "the baby not found"
-        public static Baby GetBabyById(BabyId aBabyId)
+        //****************************************************************************************************
+        // body:
+        //  Tuple{
+        //      babyId = aBabyId,
+        //      firstName = baby[aBabyId].FirstName,
+        //      lastName = baby[aBabyId].LastName,
+        //      birthday = baby[aBabyId].Birthday,
+        //      isActive = baby[aBabyId].IsActive,
+        //  }
+        public static Baby GetBaby(BabyId aBabyId)
         {
             //...
         }
 
+        //****************************************************************************************************
         //def: 
         //  aBaby=baby[aBabyId]
         //pre:
@@ -64,29 +73,22 @@ namespace babies.ApplicationLayer.Application_services
 
         //  aBaby^removeMistress(mistress[@aMistressNickName]) and
         //  aBaby^addMistress(mistress[aMistressNickName])
-
         public static void UpdateBaby(BabyId aBabyId, string aFirstName, string aLastName, string aMistressNickName)
         {
         }
 
         //****************************************************************************************************
-        // pre:
+        //pre:
         //  baby[aBabyId] -> notEmpty() and
         //post:
         //  baby[aBabyId]^destroy()
         //exception: 
-        //  baby[aBabyId].guardian -> notEmpty() 
-        // and 
         //  baby[aBabyId].guardian.baby   ->   exists( aGuardian|aGuardian.baby -> isEmpty() )
         //      implies self^throw(‘The baby cannot be deleted because at least one guardian of him is connected to other baby)
         public static void DeleteBaby(BabyId aBabyId)
         {
             //...
         }
-
-
-        //****************************************************************************************************
-
 
         //****************************************************************************************************
         // pre:
@@ -101,11 +103,9 @@ namespace babies.ApplicationLayer.Application_services
         public static void InactivateBaby(BabyId aBabyId)
         {
             //...
-        } 
+        }
 
         //****************************************************************************************************
-
-
         // Prec: Nil
         // Rslt: Baby* || nothing ( if "no babies registered" )
         // Warn: if "no babies registered"
@@ -119,7 +119,3 @@ namespace babies.ApplicationLayer.Application_services
 }
 
 
-// pre: 
-// let nbOfRegisteredBabies : int  =  self.baby -> size()
-// self.baby -> select (b|b.aBabyId = aBaby.aBabyId) -> size()=0  [Parameter guarantee/semantic verification]
-//and 
