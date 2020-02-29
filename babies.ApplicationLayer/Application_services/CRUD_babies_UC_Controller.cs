@@ -1,7 +1,6 @@
-﻿using babies.DomainLayer.Object_model;
-
-using System;
+﻿using System;
 using System.Collections.Generic;
+using babies.DomainLayer.Object_model.Primitive_Types;
 
 // a precondition can never contradict the conceptual model
 namespace babies.ApplicationLayer.Application_services
@@ -57,9 +56,10 @@ namespace babies.ApplicationLayer.Application_services
         //      birthday = baby[aBabyId].Birthday,
         //      isActive = baby[aBabyId].IsActive,
         //  }
-        public static Baby GetBaby(BabyId aBabyId)
+        public static BabyDTO GetBaby(BabyId aBabyId)
         {
             //...
+            return new BabyDTO();
         }
 
         //****************************************************************************************************
@@ -106,16 +106,18 @@ namespace babies.ApplicationLayer.Application_services
         }
 
         //****************************************************************************************************
-        // Prec: Nil
-        // Rslt: Baby* || nothing ( if "no babies registered" )
-        // Warn: if "no babies registered"
-        public static List<Baby> GetAllBabies()
+        // body:
+        //  self.baby -> collect(aBaby|
+        //      Tuple{
+        //          babyId = aBaby.BabyId
+        //          firstName = aBaby.FirstName
+        //          lastName = aBaby.LasttName
+        //          birthday = aBaby.Birthday
+        //      })
+        public static List<BabyDTO> GetAllBabies()
         {
             //...
-            return new List<Baby>();
+            return new List<BabyDTO>();
         }
     }
-
 }
-
-
