@@ -4,17 +4,10 @@ using System.Text;
 
 namespace babies.DomainLayer.Object_model
 {
-    public class Baby
+    public class Guardian
     {
-        public BabyId BabyId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public DateTime Birthday { get; set; }
-        public bool IsActive { get; set; } = true;
+        public string FullName { get; set; }
     }
-
-    public struct BabyId
-    {
-    }
-
 }
