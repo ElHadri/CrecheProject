@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Domain_Base_classes%28Layer_supertypes%29\**" />
+    <EmbeddedResource Remove="Domain_Base_classes%28Layer_supertypes%29\**" />
+    <None Remove="Domain_Base_classes%28Layer_supertypes%29\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Domain_services\" />
+  </ItemGroup>
+
+</Project>

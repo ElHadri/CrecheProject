@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Application_Base_classes%28Layer_supertypes%29\**" />
+    <EmbeddedResource Remove="Application_Base_classes%28Layer_supertypes%29\**" />
+    <None Remove="Application_Base_classes%28Layer_supertypes%29\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Diagnostics.Contracts" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\babies.DomainLayer\babysit.DomainLayer.csproj" />
+  </ItemGroup>
+
+</Project>
