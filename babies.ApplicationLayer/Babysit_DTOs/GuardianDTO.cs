@@ -2,12 +2,17 @@
 
 namespace Babysit.ApplicationLayer
 {
-    public class BabyDTO
+    public class GuardianDTO
     {
-        public string BabyCardId { get; set; }
+        public string GuardianCardId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public DateTime Birthday { get; set; }
         public bool IsActive { get; set; } = true;
+        public Kinship Kinship { get; set; }
+    }
+
+    public enum Kinship
+    {
+        Father, Mother, Other
     }
 }

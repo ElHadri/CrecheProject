@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using Babies.ApplicationLayer;
 using Babysit.ApplicationLayer;
 
 // a precondition can never contradict the conceptual model
-namespace Babies.ApplicationLayer.Application_services
+namespace ApplicationLayer.Services
 {
     // UC_Prec: user authorized
     // UC_Post: 
-    public class CRUD_babysit_Controller  // les methodes jouent un double role (UC & system operation)
+    public class ManageBabies_Controller  // les methodes jouent un double role (UC & system operation)
     {
         // Prec: --none
         // Rslt: bool  ( true if "the baby found" / false if "the baby not found")
-        public bool isBabyIdExists(int aBabyId)
+        public bool isBabyIdExists(string aBabyCardId)
         {
             //...
             return true;
@@ -34,7 +33,7 @@ namespace Babies.ApplicationLayer.Application_services
         // newBaby^addMistress(mistress[aMistressNickName]) and
         // self^addBaby(newBaby)
         public void CreateBaby(
-            int aBabyCode,
+            string aBabyCardId,
             string aFirstName,
             string aLastName,
             DateTime aBirthday,
@@ -55,14 +54,14 @@ namespace Babies.ApplicationLayer.Application_services
         //      birthday = baby[aBabyCode].Birthday,
         //      isActive = baby[aBabyCode].IsActive,
         //  }
-        public BabyDTO GetBabyByCode(int aBabyCode)
+        public BabyDTO GetBabyByCode(string aBabyCardId)
         {
             // as a DB
-            if (aBabyCode == 13)
+            if (aBabyCardId == "13")
             {
                 var newBaby = new BabyDTO()
                 {
-                    BabyCode = 1,
+                    BabyCardId = "13",
                     FirstName = "Imrane",
                     LastName = "El Hadri",
                     Birthday = new DateTime(2016, 03, 11),
@@ -73,7 +72,7 @@ namespace Babies.ApplicationLayer.Application_services
             }
             else
             {
-                throw new Exception($"No baby with code {aBabyCode} exists !!");
+                throw new Exception($"No baby with code {aBabyCardId} exists !!");
             }
         }
 

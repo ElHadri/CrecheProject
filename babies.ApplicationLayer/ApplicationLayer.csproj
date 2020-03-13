@@ -5,11 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Application_Base_classes%28Layer_supertypes%29\" />
+    <ProjectReference Include="..\babies.DomainLayer\DomainLayer.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\babies.DomainLayer\DomainLayer.csproj" />
+    <Folder Include="Application_Base_classes%28Layer_supertypes%29\" />
   </ItemGroup>
 
 </Project>

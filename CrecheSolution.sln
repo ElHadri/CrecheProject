@@ -19,12 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainLayer", "babies.Domai
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "My Notes", "My Notes", "{09D3DAB0-E6AE-4878-ABC3-D2C08EC76696}"
 	ProjectSection(SolutionItems) = preProject
+		Jargon.txt = Jargon.txt
 		TextFile1.txt = TextFile1.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Babysit", "Babysit", "{2E9BD09E-C797-499E-B5E5-7997743E940B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationLayer_Tests", "ApplicationLayer_Tests\ApplicationLayer_Tests.csproj", "{4D7DC07D-FC56-4660-A69A-1821EA1AA3FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationLayer_Tests", "ApplicationLayer_Tests\ApplicationLayer_Tests.csproj", "{4D7DC07D-FC56-4660-A69A-1821EA1AA3FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

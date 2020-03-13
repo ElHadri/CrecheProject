@@ -1,5 +1,5 @@
 ﻿using System;
-using Babies.ApplicationLayer.Application_services;
+using ApplicationLayer.Services;
 using Xunit;
 
 namespace Babysit.ApplicationLayer_Tests.ManageBabies_Controller_Tests
@@ -11,8 +11,8 @@ namespace Babysit.ApplicationLayer_Tests.ManageBabies_Controller_Tests
         public void Return_an_info_message_when_no_baby_corresponds_to_the_provided_code()
         {
             //Arrange
-            var sut = new CRUD_babysit_Controller();
-            var codeNotYetAssigned = 0;
+            var sut = new ManageBabies_Controller();
+            var codeNotYetAssigned = "";
             var expectedInfoMessage = $"No baby with code {codeNotYetAssigned} exists !!";
             var actualInfoMessage = "";
 
@@ -34,7 +34,7 @@ namespace Babysit.ApplicationLayer_Tests.ManageBabies_Controller_Tests
         public void Return_details_about_a_baby_having_the_code_13()
         {
             // Arrange
-            var sut = new CRUD_babysit_Controller();
+            var sut = new ManageBabies_Controller();
             var expectedFirstName = "Imrane";
             var expectedLastName = "El Hadri";
             var expectedBirthday = new DateTime(2016, 03, 11);
@@ -42,7 +42,7 @@ namespace Babysit.ApplicationLayer_Tests.ManageBabies_Controller_Tests
 
 
             // Act
-            var retrievedBaby = sut.GetBabyByCode(13);
+            var retrievedBaby = sut.GetBabyByCode("13");
             var actualFirstName = retrievedBaby.FirstName;
             var actualLastName = retrievedBaby.LastName;
             var actualBirthday = retrievedBaby.Birthday;
@@ -53,8 +53,6 @@ namespace Babysit.ApplicationLayer_Tests.ManageBabies_Controller_Tests
             Assert.Equal(expectedLastName, actualLastName);
             Assert.Equal(expectedBirthday, actualBirthday);
             Assert.Equal(expectedIsActive, actualIsActive);
-
-
         }
     }
 }
